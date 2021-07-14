@@ -1,6 +1,7 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HelperBase {
@@ -16,6 +17,8 @@ public class HelperBase {
 
     protected void type(By locator, String text) {
         click(locator);
+        driver.findElement(locator).sendKeys(Keys.CONTROL + "a");
+        driver.findElement(locator).sendKeys(Keys.DELETE);
         driver.findElement(locator).sendKeys(text);
     }
 }
