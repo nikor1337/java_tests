@@ -19,11 +19,11 @@ public class ApplicationManager {
     }
 
     public void init() {
-        if (browser == BrowserType.CHROME) {
+        if (browser.equals(BrowserType.CHROME)) {
             driver = new ChromeDriver();
-        } else if (browser == BrowserType.FIREFOX) {
+        } else if (browser.equals(BrowserType.FIREFOX)) {
             driver = new FirefoxDriver();
-        } else if (browser == BrowserType.IE) {
+        } else if (browser.equals(BrowserType.IE)) {
             driver = new InternetExplorerDriver();
         }
         driver.get("http://192.168.1.69/addressbook/");
