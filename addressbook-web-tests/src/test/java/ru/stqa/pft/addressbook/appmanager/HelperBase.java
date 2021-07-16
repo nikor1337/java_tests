@@ -17,9 +17,11 @@ public class HelperBase {
     }
 
     protected void type(By locator, String text) {
-        click(locator);
-        driver.findElement(locator).sendKeys(Keys.CONTROL + "a");
-        driver.findElement(locator).sendKeys(Keys.DELETE);
-        driver.findElement(locator).sendKeys(text);
+        if (text != null) {
+            click(locator);
+            driver.findElement(locator).sendKeys(Keys.CONTROL + "a");
+            driver.findElement(locator).sendKeys(Keys.DELETE);
+            driver.findElement(locator).sendKeys(text);
+        }
     }
 }
