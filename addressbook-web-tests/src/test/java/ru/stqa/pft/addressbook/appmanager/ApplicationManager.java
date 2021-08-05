@@ -27,7 +27,7 @@ public class ApplicationManager {
         } else if (browser.equals(BrowserType.IE)) {
             driver = new InternetExplorerDriver();
         }
-        driver.get("http://192.168.1.69/addressbook/");
+        driver.get("http://192.168.1.72/addressbook/");
         driver.manage().window().maximize();
         groupHelper = new GroupHelper(driver);
         navigationHelper = new NavigationHelper(driver);
