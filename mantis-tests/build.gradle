@@ -16,6 +16,7 @@ dependencies {
     implementation 'org.hibernate:hibernate-core:5.1.0.Final'
     implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
     implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.3.6'
 }
 
 test {
